@@ -480,7 +480,9 @@ CGSize NISizeOfAttributedStringConstrainedToSize(NSAttributedString* attributedS
   return [self.mutableAttributedString copy];
 }
 
-- (void)setAttributedText:(NSAttributedString *)attributedText {
+- (void)setAttributedText:(NSAttributedString *)attributedText 
+  [super setAttributedText:attributedText];
+
   if (self.mutableAttributedString != attributedText) {
     self.mutableAttributedString = [attributedText mutableCopy];
 
